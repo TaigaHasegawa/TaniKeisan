@@ -10,8 +10,8 @@
     max-width: 550px;
  }
  #lead  ol img {
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: auto;
     position: absolute;
     left: 30%;
     top: 30%;
