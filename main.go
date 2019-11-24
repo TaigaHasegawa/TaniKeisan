@@ -255,7 +255,7 @@ func mosaic(w http.ResponseWriter, r *http.Request) {
 				}
 			}
 		}
-		result = "卒業不可:" + "総合単位(" + strconv.Itoa(80-TotalTani) + "単位不足)不足。" + result
+		result = "卒業不可\n" + "総合単位(" + strconv.Itoa(80-TotalTani) + "単位不足)不足。" + result
 	}
 
 	ResultLists := results{TotalTani: TotalTani, TotalSenmonOne: TotalSenmonOne, TotalSenmonTwo: TotalSenmonTwo, TotalSenmonThree: TotalSenmonThree, TotalSenmonFour: TotalSenmonFour,
