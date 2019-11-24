@@ -24,30 +24,31 @@
   </head>   
   <body>
     <div class='container'>
-
+        {{with .}}
         <div class="col-md-6">
-          <div class="lead">{{. Result}}</div>
+          <h3>結果</h3>
+          <div class="lead">{{.Result}}</div>
         </div>
         <div class="col-md-6">
-          <div class="lead">
               <h3>単位計算一覧</h3>
-              <p>総単位数: {{. TotalTani}}/80</p>
-              <p>専門科目1: {{. TotalSenmonOne}}/20</p>
-              <p>専門科目2: {{. TotalSenmonTwo}}/18</p>
-              <p>専門科目3: {{. TotalSenmonThree}}/18</p>
-              <p>専門科目4: {{. TotalSenmonFour}}/18</p>
-              <p>選択科目: {{. TotalSentaku}}</p>
-              <p>優上: {{. TotalYujyo}}</p>
-              <p>優: {{. TotalYu}}</p>
-              <p>良: {{. TotalRyo}}</p>
-              <p>可: {{. TotalKa}}</p>
-              <p>合格: {{. TotalGoukaku}}</p>
-              <p>不可: {{. TotalFuka}}</p>
-              <p>未受験: {{. TotalMijyuken}}</p>
-              <p>その他: {{. TotalSonota}}</p>
-          </div>
+              <div class="lead">
+              <p>総単位数: {{.TotalTani}}/80</p>
+              <p>専門科目1: {{.TotalSenmonOne}}/20</p>
+              <p>専門科目2: {{.TotalSenmonTwo}}/18</p>
+              <p>専門科目3: {{.TotalSenmonThree}}/18</p>
+              <p>専門科目4: {{.TotalSenmonFour}}/18</p>
+              <p>選択科目: {{.TotalSentaku}}</p>
+              <p>優上: {{.TotalYujyo}}</p>
+              <p>優: {{.TotalYu}}</p>
+              <p>良: {{.TotalRyou}}</p>
+              <p>可: {{.TotalKa}}</p>
+              <p>合格: {{.TotalGoukaku}}</p>
+              <p>不可: {{.TotalFuka}}</p>
+              <p>未受験: {{.TotalMijyuken}}</p>
+              <p>その他: {{.TotalSonota}}</p>
+              </div>
         </div>
-              
+        {{end}}
 
         <div class="col-md-12 center">
           <a class="btn btn-lg btn-info" href="/">Go Back</a>
