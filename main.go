@@ -47,7 +47,9 @@ func main() {
 	fmt.Println("Starting mosaic server ...")
 	mux := http.NewServeMux()
 	files := http.FileServer(http.Dir("public"))
+	images := http.FileServer(http.Dir("images"))
 	mux.Handle("/static/", http.StripPrefix("/static/", files))
+	mux.Handle("/images/", http.StripPrefix("/images/", images))
 
 	mux.HandleFunc("/", upload)
 	mux.HandleFunc("/mosaic", mosaic)

@@ -23,8 +23,8 @@
     </head>    
     <div class='container'>
       <div class='content'>
-        <h1>Tani Calculation</h1>
-        <div class="lead">Calculate credits you  earned so far and tell you whether you can graduate or not</div>
+        <h1>経済学部卒業単位計算</h1>
+        <div class="lead">今までの取得単位数を専門科目や選択科目ごとに計算し、卒業可能かどうか判断する</div>
 		
         <form class="form form-inline" method="post" action="/mosaic" enctype="multipart/form-data">
           <select name="goukaku" class="form-control input-lg">
@@ -39,5 +39,20 @@
           </button>
           <p class="help-block">Select your major.</p>
         </form>
+        <div class="lead">
+          <h2>使い方</h2>
+          <ol>
+            <li>UTASの成績・定期試験の項目から自分の成績を開く</li>
+            <img src="/images/firststep.png" alt="">
+            <li>画像のように該当箇所をコピーする</li>
+            <img src="/images/secondstep.png" alt="">
+            <li>エクセルに以下のようにペーストする</li>
+            <img src="/images/thirdstep.png" alt="">
+            <li>csvあるいはxlsx形式で保存する</li>
+            <img src="/images/fourthstep.png" alt="">
+            <li>このサイトで該当ファイルを指定しアップロードする</li>
+            <img src="/images/fourthstep.png" alt="">
+          </ol>
+        </div>
   </body>
 </html>
