@@ -173,13 +173,13 @@ func mosaic(w http.ResponseWriter, r *http.Request) {
 				if TotalSenmonTwo >= 18 {
 					result = "卒業見込み"
 				} else {
-					result = "現段階では卒業できません:\n　総合単位は足りています。専門科目2(" + strconv.Itoa(18-TotalSenmonOne) + "単位不足)が不足しています。"
+					result = "現段階では卒業できません。:\n　総合単位は足りています。専門科目2(" + strconv.Itoa(18-TotalSenmonOne) + "単位不足)が不足しています。"
 				}
 			} else {
 				if TotalSenmonTwo < 18 {
-					result = "現段階では卒業できません:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(20-TotalSenmonOne) + "単位不足)" + ",専門科目2(" + strconv.Itoa(18-TotalSenmonTwo) + "単位不足)が不足しています。"
+					result = "現段階では卒業できません。:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(20-TotalSenmonOne) + "単位不足)" + ",専門科目2(" + strconv.Itoa(18-TotalSenmonTwo) + "単位不足)が不足しています。"
 				} else {
-					result = "現段階では卒業できません:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(20-TotalSenmonOne) + "単位不足)が不足しています。"
+					result = "現段階では卒業できません。:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(20-TotalSenmonOne) + "単位不足)が不足しています。"
 				}
 			}
 		} else if major == "経営" {
@@ -187,13 +187,13 @@ func mosaic(w http.ResponseWriter, r *http.Request) {
 				if TotalSenmonThree >= 18 {
 					result = "卒業見込み"
 				} else {
-					result = "現段階では卒業できません:\n　総合単位は足りています。専門科目3(" + strconv.Itoa(18-TotalSenmonThree) + "単位不足)が不足しています。"
+					result = "現段階では卒業できません。:\n　総合単位は足りています。専門科目3(" + strconv.Itoa(18-TotalSenmonThree) + "単位不足)が不足しています。"
 				}
 			} else {
 				if TotalSenmonThree < 18 {
-					result = "現段階では卒業できません:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(20-TotalSenmonOne) + "単位不足)" + ",専門科目3(" + strconv.Itoa(18-TotalSenmonThree) + "単位不足)が不足しています。"
+					result = "現段階では卒業できません。:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(20-TotalSenmonOne) + "単位不足)" + ",専門科目3(" + strconv.Itoa(18-TotalSenmonThree) + "単位不足)が不足しています。"
 				} else {
-					result = "現段階では卒業できません:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(20-TotalSenmonOne) + "単位不足)が不足しています。"
+					result = "現段階では卒業できません。:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(20-TotalSenmonOne) + "単位不足)が不足しています。"
 				}
 			}
 		} else if major == "金融" {
@@ -201,13 +201,13 @@ func mosaic(w http.ResponseWriter, r *http.Request) {
 				if TotalSenmonFour >= 18 {
 					result = "卒業見込み"
 				} else {
-					result = "現段階では卒業できません:\n　総合単位は足りています。専門科目4(" + strconv.Itoa(18-TotalSenmonFour) + "単位不足)が不足しています。"
+					result = "現段階では卒業できません。:\n　総合単位は足りています。専門科目4(" + strconv.Itoa(18-TotalSenmonFour) + "単位不足)が不足しています。"
 				}
 			} else {
 				if TotalSenmonFour < 18 {
-					result = "現段階では卒業できません:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(18-TotalSenmonOne) + "単位不足)" + ",専門科目4(" + strconv.Itoa(18-TotalSenmonFour) + "単位不足)が不足しています。"
+					result = "現段階では卒業できません。:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(18-TotalSenmonOne) + "単位不足)" + ",専門科目4(" + strconv.Itoa(18-TotalSenmonFour) + "単位不足)が不足しています。"
 				} else {
-					result = "現段階で卒業できません:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(20-TotalSenmonOne) + "単位不足)が不足しています。"
+					result = "現段階で卒業できません。:\n　総合単位は足りています。専門科目1(" + strconv.Itoa(20-TotalSenmonOne) + "単位不足)が不足しています。"
 				}
 			}
 		}
@@ -255,7 +255,7 @@ func mosaic(w http.ResponseWriter, r *http.Request) {
 				}
 			}
 		}
-		result = "現段階では卒業できません\n" + "総合単位(" + strconv.Itoa(80-TotalTani) + "単位不足)が不足しています。" + result
+		result = "現段階では卒業できません。\n" + "総合単位(" + strconv.Itoa(80-TotalTani) + "単位不足)が不足しています。" + result
 	}
 
 	ResultLists := results{TotalTani: TotalTani, TotalSenmonOne: TotalSenmonOne, TotalSenmonTwo: TotalSenmonTwo, TotalSenmonThree: TotalSenmonThree, TotalSenmonFour: TotalSenmonFour,
