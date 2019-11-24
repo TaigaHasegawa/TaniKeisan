@@ -8,6 +8,7 @@
  
  #instruction {
     max-width: 700px;
+    font: 25px
  }
  #instruction img {
     width: 100%;
